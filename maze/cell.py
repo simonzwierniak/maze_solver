@@ -1,17 +1,18 @@
 from graphics import Line, Point
 
+
 class Cell:
     def __init__(self, win=None):
         self.has_left_wall = True
         self.has_right_wall = True
         self.has_top_wall = True
         self.has_bottom_wall = True
+        self.visited = False
         self.__x1 = -1
         self.__x2 = -1
         self.__y1 = -1
         self.__y2 = -1
         self.__win = win
-        self.__visited = False
 
     def draw(self, x1, y1, x2, y2):
         if self.__win is None:
